@@ -1,0 +1,179 @@
+.crew{
+        
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5% 0 10%;     
+        min-height: 710px;   
+       
+       @include m1024{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+       
+    }
+
+    &__details{
+        width: 615px;
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+
+        @include m1024{
+           padding-left: 0;
+           align-items: center;
+           text-align: center;
+           order: 2;
+           height: auto;
+           width: auto;
+        }
+    }
+
+    &__img{
+        
+        height: 100%;
+
+        @include m1024{
+            order: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            width: auto;
+            margin-bottom: 40px;
+            align-items: center ;
+         }
+     
+    }
+ }
+
+.details{
+
+    &__title{
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 28px;
+        font-weight: 100;
+        letter-spacing: 4.72px;
+        margin-top: 300px;
+        margin-left: 10%;
+
+        @include m1024{
+            margin-bottom: 30px;
+            font-size: 16px;
+            padding-top: 0;
+            text-align: center;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    &__number{
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.2);
+        margin-right: 20px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        min-height: 420px;
+
+        @include m1024{
+            order: 2;
+            min-height: auto;
+        }
+       
+    }
+
+    &__grade, &__name{
+        font-family: 'Bellefair', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__grade{
+        font-size: 32px;
+        color: rgba(255, 255, 255, 0.3);
+        margin-top: 25px;
+
+        
+    }
+
+    &__name{
+        font-size: 56px;
+        font-weight: 100;
+        margin: 15px 0 25px 0;
+
+        @include m1024{
+            width: auto;
+            max-width: none;
+            font-size: 24px;
+        }
+    }
+
+    &__description{
+        max-width: 444px;
+        font-size: 18px;
+        font-weight: lighter;
+        font-family: 'Barlow', sans-serif;
+        color: #D0D6F9;
+        line-height: 32px;
+        min-height: 180px;
+
+        @include m1024{
+            max-width: 444px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__dots{
+        display: flex;
+       
+
+        @include m1024{
+           position: initial;
+           order: 0;
+           margin-bottom: 10PX;
+        }
+    }
+}
+
+
+.dots{
+
+    &__active, &__inactive{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 20px;
+        cursor: pointer;
+
+        @include m1024{
+            margin: 0 10px;
+        }
+    }
+
+    &__active{
+        background-color: white;
+    }
+    &__inactive{
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: background-color 0.5s ease;
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.img{
+
+    height: 100%;
+
+    @include m1024{
+        width: auto;
+        height: 70vw;
+        max-height: 500px;
+        max-width: 100%;
+    }
+   
+}

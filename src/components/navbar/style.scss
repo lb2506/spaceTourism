@@ -1,0 +1,205 @@
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding-top: 20px;
+    padding-left: 5%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 20;
+
+    &__logo{
+        width: 48px;
+        height: 48px;
+    }
+
+    &__divider{
+        width: 45%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);  
+        z-index: 10;
+        position: absolute;
+        left: 150px;
+
+        @include m1024{
+            display: none;
+        }
+    }
+
+    &__btn{
+
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        top: 60px;
+        right: 5%;
+        z-index: 30;
+        border: none;
+        outline: inherit;
+        cursor: pointer;
+        background: transparent;
+        display: none;
+
+        @include m1024{
+            display: block;
+        }
+
+        &::before, &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #D0D6F9;
+            z-index: 30;
+        }
+        &:before {
+            top: 0px;
+            transition: all 0.3s ease-in-out;
+
+        }
+        &:after {
+            top: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+
+            &::before{
+                top : 15px;
+                transform: rotate(45deg);
+            }
+
+            &::after{
+                top : 15px;
+                transform: rotate(-45deg);
+            }
+        }
+    
+
+    }
+
+    &__burger{
+        width: 100%;
+        height: 4px;
+        top: 15px;
+        left: 0;
+        background-color: #D0D6F9;
+        position: absolute;
+        transition: width 0.3s ease-in-out;
+        
+        &.active{
+            width: 0%;
+        }
+      
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    &__items{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);  
+        height: 100%;
+        padding-left: 10%;
+
+        @include m1024{
+           position: fixed;
+           right: -100%;
+           bottom: 0;
+           padding: 0% 20% 0% 10%;
+           transition: right 0.5s ease-in-out;
+
+            &.active{
+               right: 0%;
+            
+            }
+        }
+        
+        
+        
+        ul{
+            display: flex;
+            align-items: center;
+            color: white;
+            list-style: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 100;
+            letter-spacing: 2.7px;
+            width: 100%;
+            height: 100%;
+
+            @include m1024{
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 200px;
+            }
+        }
+
+        li{
+            margin-right: 5vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+
+            @include m1024{
+                height: auto;
+                margin: 10% 0 20% 0;
+            }
+            }    
+       
+        }
+    }
+
+    a {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            display: block;
+            height: 4px;
+            bottom: -40px;
+            left: 0;
+            transition: width 0.5s ease, background-color 0.5s ease;
+
+            @include m1024{
+                bottom: -20px;
+            }
+            
+        }
+        &.active{
+            &:after {   
+                width: 100%;
+                background-color: white;
+            }
+
+        }
+
+        &:hover{
+
+            &:after{
+                background-color: grey;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.items{
+
+    &__numbers{
+        font-weight: 600;
+        margin-right: 10px ;
+    }
+}
+
+
+

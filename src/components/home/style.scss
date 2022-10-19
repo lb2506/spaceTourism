@@ -1,0 +1,128 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../assets/home/background-home-desktop.jpg') no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        min-width: 930px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        @include m1024{
+            flex-direction: column;
+            text-align: center;
+            min-width: 0px;
+            top: 60%;
+            width: 90%;
+        }
+    }
+
+    &__textBloc{
+        min-width: 475px;
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        justify-content: space-between;
+
+        @include m1024{
+            min-width: 0px;
+            height: auto;
+        }
+    }
+
+    &__explore{
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Bellefair', sans-serif;
+        font-size: 32px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        @include m1024{
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        &:hover{
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.1);  
+        }
+    }
+}
+
+.explore{
+    &__text{
+        width: 274px;
+        height: 274px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+
+        @include m1024{
+            width: 150px;
+            height: 150px;
+        }
+
+    }
+}
+
+.textBloc{
+
+    &__heading5{
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 28px;
+        letter-spacing: 4.75px;
+        color: #D0D6F9;
+        font-weight: 300;
+    }
+
+    &__heading1{
+        font-family: 'Bellefair', sans-serif;
+        font-size: 150px;
+        color: white;
+        font-weight: 100;
+
+        @include m1024{
+           font-size: 80px;
+           letter-spacing: 5px;
+           margin: 20px 0;
+           font-weight: bold;
+        }
+    }
+}
+
+.bodyText{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: #D0D6F9;
+    font-weight: 300;
+    width: 444px;
+    line-height: 40px;
+
+    @include m1024{
+        font-size: 15px;
+         width: auto;
+         max-width: 444px;
+         line-height: 25px;
+         font-weight: 500;
+     }
+}
