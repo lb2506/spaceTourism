@@ -16,10 +16,10 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact="true" path="/spaceTourism/" element={<Home />} />
-          <Route exact="true" path="/spaceTourism/destinations" element={<Destinations />} />
-          <Route exact="true" path="/spaceTourism/crew" element={<Crew />} />
-          <Route exact="true" path="/spaceTourism/technology" element={<Technology />} />
+          <Route exact="true" path="/" element={<Home />} />
+          <Route exact="true" path="/destinations" element={<Destinations />} />
+          <Route exact="true" path="/crew" element={<Crew />} />
+          <Route exact="true" path="/technology" element={<Technology />} />
         </Routes>
       </Router>
     </>

@@ -15,7 +15,7 @@ let Home = function () {
                     <p className="textBloc__bodyText bodyText">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                 </div>
                 <div className="home__explore">
-                    <NavLink to="/spaceTourism/destinations"><div className="explore__text">EXPLORE</div></NavLink>
+                    <NavLink to="/destinations"><div className="explore__text">EXPLORE</div></NavLink>
                 </div>
             </div>
         </div>
